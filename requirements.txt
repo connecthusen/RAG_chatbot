@@ -1,0 +1,5 @@
+python-dotenv
+pytest
+groq
+chromadb
+sentence-transformers
