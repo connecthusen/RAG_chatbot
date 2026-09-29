@@ -84,7 +84,7 @@ Thumbs.db
 logs/
 log/
 
-# ===== RAG / Vector DB / Model specific =====
+# RAG / Vector DB / Model specific
 data/vector_db/
 data/raw/*
 data/processed/*
@@ -114,10 +114,10 @@ sentence_transformers_cache/
 .llama_index/
 storage/
 
-# ===== Docker =====
+#  Docker
 *.pid
 
-# ===== Misc =====
+# Misc
 *.bak
 *.tmp
 .cache
