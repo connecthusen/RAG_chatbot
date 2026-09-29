@@ -3,3 +3,4 @@ pytest
 groq
 chromadb
 sentence-transformers
+langgraph
