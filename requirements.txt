@@ -4,3 +4,5 @@ groq
 chromadb
 sentence-transformers
 langgraph
+pypdf
+langchain-text-splitters
