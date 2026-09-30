@@ -6,3 +6,5 @@ sentence-transformers
 langgraph
 pypdf
 langchain-text-splitters
+fastapi
+uvicorn
