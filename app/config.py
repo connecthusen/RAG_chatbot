@@ -46,6 +46,9 @@ class Settings:
 
     parent_store_path: str = field(default_factory=lambda: _get_env("PARENT_STORE_PATH", "data/vector_db/parents.json"))
 
+    rerank_model: str = field(default_factory=lambda: _get_env("RERANK_MODEL", "cross-encoder/ms-marco-MiniLM-L-6-v2"))
+    retrieval_candidates: int = field(default_factory=lambda: int(_get_env("RETRIEVAL_CANDIDATES", "10")))
+
 
 def get_settings() -> Settings:
     return Settings()
