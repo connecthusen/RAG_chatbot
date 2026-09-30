@@ -18,6 +18,7 @@ def _get_env(key: str, default: str | None = None, required: bool = False) -> st
 class Settings:
     groq_api_key: str = field(default_factory=lambda: _get_env("GROQ_API_KEY", required=True))
     llm_model: str = field(default_factory=lambda: _get_env("LLM_MODEL", "llama-3.3-70b-versatile"))
+    hf_token: str = field(default_factory=lambda: _get_env("HF_TOKEN", ""))
 
     embedding_model: str = field(
         default_factory=lambda: _get_env("EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
@@ -42,6 +43,8 @@ class Settings:
 
     parent_chunk_size: int = field(default_factory=lambda: int(_get_env("PARENT_CHUNK_SIZE", "2000")))
     parent_chunk_overlap: int = field(default_factory=lambda: int(_get_env("PARENT_CHUNK_OVERLAP", "200")))
+
+    parent_store_path: str = field(default_factory=lambda: _get_env("PARENT_STORE_PATH", "data/vector_db/parents.json"))
 
 
 def get_settings() -> Settings:
